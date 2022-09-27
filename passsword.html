@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>введите пароль!</title>
+</head>
+
+<body>
+    <script>
+
+        function checkPassword() {
+            var elem = document.getElementById('passwordBOX');
+            var password = elem.value;
+            if (password == 'НИКИТА') {
+                return true;
+            } else {
+                alert('неверный пароль');
+                return false;
+            }
+        }
+
+    </script>
+    <p>для входа введите пароль:</p>
+    <p><input id="passwordBOX" type="password"></p>
+    <p><a href="https://ya.ru" onclick="return checkPassword();">вход</a></p>
+</body>
+
+</html>
