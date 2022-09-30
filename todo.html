@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <title> список дел </title>
+    <style>
+        .header {
+            font-size: 55px;
+
+        }
+
+        input[type="button"] {
+            background-color: red;
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <script>
+        function addItem() {
+            var elem = document.getElementById("list");
+            var newelem=document.createElement("p");
+            var taskElem= document.getElementById("task");
+            newelem.innerHTML=taskElem.value;
+            newelem.onclick=removeItem;
+            elem.appendChild(newelem);
+
+        }
+        function removeItem(){
+            var elem = document.getElementById("list");
+elem.removeChild(this);
+
+        }
+    </script>
+    <p CLASS="header"> список дел</p>
+    <p><input id="task"type="text" value="введи задачу сюда"></p>
+    <p><input type="button" value="добавить задачу" onclick="addItem();"> </p>
+    <P id="list"></P>
+</body>
+
+</html>
